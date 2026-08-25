@@ -1,0 +1,18 @@
+:root{
+/* Brand greens — sampled from the logo: deep leaf #005D42, sage fill #92CDB1 */
+--green-50:#f2f9f5;--green-100:#e3f2ea;--green-200:#c6e5d3;--green-300:#92cdb1;--green-400:#6bb694;
+--green-500:#3e9c74;--green-600:#1c7e58;--green-700:#005d42;--green-800:#004a34;--green-900:#002e20;
+/* Warm neutrals — paper, never pure white or pure grey */
+--neutral-0:#ffffff;--neutral-50:#fbfaf7;--neutral-100:#f4f2ed;--neutral-200:#e7e4dc;--neutral-300:#d3cfc4;
+--neutral-400:#a9a49a;--neutral-500:#7d7973;--neutral-600:#5a5751;--neutral-700:#3b3a36;--neutral-800:#26302b;--neutral-900:#16211c;
+/* Accents — kitchen palette, used sparingly for data and food categories */
+--clay-400:#e0a08a;--clay-500:#c96a4b;--clay-600:#a8502f;
+--citrus-300:#f6d59a;--citrus-400:#e8a33d;--citrus-500:#c9831f;
+--berry-400:#b06a86;--berry-500:#8e4a63;
+--water-400:#6fa8bd;--water-500:#3e7c9c;
+/* Semantic status */
+--success:#3e9c74;--success-bg:#e3f2ea;
+--warning:#c9831f;--warning-bg:#fdf1dd;
+--danger:#b4432c;--danger-bg:#f9e6e1;
+--info:#3e7c9c;--info-bg:#e5eff3;
+}

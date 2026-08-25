@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/radii.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/base.css">
+  <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/styles.css">
+  <script src="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: var(--surface-card); }
+    * { box-sizing: border-box; }
+    a { color: var(--text-link); text-decoration: none; }
+    a:has(button) { border-bottom: none; }
+    a:hover { color: var(--text-link-hover); }
+    .nav-toggle { display: none; }
+    .nav-links { display: flex; }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q .i-up { display: none; }
+    details[open] > .faq-q .i-down { display: none; }
+    details[open] > .faq-q .i-up { display: block; }
+    @media (max-width: 900px) {
+      .brand-logo { height: 44px !important; }
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: var(--space-5); width: 100%; padding-top: var(--space-5); }
+      .nav-open .nav-links { display: flex; }
+      .nav-toggle { display: inline-flex; }
+      .split { grid-template-columns: 1fr !important; }
+      .cols-3 { grid-template-columns: 1fr !important; }
+      .cols-2 { grid-template-columns: 1fr !important; }
+      .band { padding-left: var(--gutter-page) !important; padding-right: var(--gutter-page) !important; }
+    }
+  </style>
+</helmet>
+<div style="background:var(--surface-card);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-relaxed);min-height:100vh">
+
+  <header id="siteHeader" class="band" style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-5) var(--space-8);padding:var(--space-5) var(--gutter-page-lg);background:var(--surface-card);border-bottom:1px solid var(--border-subtle);position:sticky;top:0;z-index:30">
+    <a href="Site Mariana Veiga.dc.html" style="margin-right:auto;display:inline-flex;border-bottom:none">
+      <img class="brand-logo" src="assets/ds-logo.png" alt="Mariana Veiga Nutrição Clínica e Esportiva" style="height:56px;width:auto;object-fit:contain">
+    </a>
+    <button onClick="{{ toggleNav }}" class="nav-toggle" aria-label="Menu" style="background:none;border:1px solid var(--border-default);border-radius:var(--radius-pill);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--green-700)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="17" y2="17"></line></svg>
+    </button>
+    <nav class="nav-links" style="align-items:center;gap:var(--space-7);flex-wrap:wrap">
+      <a href="Sobre.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Sobre</a>
+      <a href="Atuacao.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Atuação</a>
+      <a href="Atendimento.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Atendimento</a>
+      <a href="Blog.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Conteúdo</a>
+      <a href="Duvidas.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Dúvidas</a>
+      <a href="Contato.dc.html" style="border-bottom:none">
+        <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Button" size="sm" hint-size="150px,34px">Agendar consulta</x-import>
+      </a>
+    </nav>
+  </header>
+
+  <section class="band" style="background:var(--green-50);padding:var(--space-12) var(--gutter-page-lg)">
+    <div style="max-width:var(--content-max);margin:0 auto">
+      <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Contato</div>
+      <h1 style="font-family:var(--font-display);font-size:var(--text-4xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:20ch;margin:0 0 var(--space-6)">Vamos marcar sua primeira consulta.</h1>
+      <p style="font-size:var(--text-md);color:var(--neutral-600);max-width:52ch;margin:0">Me conte em poucas linhas o seu objetivo e a sua rotina. Retorno com os horários disponíveis e o que preparar para a primeira consulta.</p>
+    </div>
+  </section>
+
+  <section class="band" style="padding:var(--space-12) var(--gutter-page-lg)">
+    <div style="max-width:var(--content-max);margin:0 auto">
+      <div class="cols-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)">
+        <a href="{{ waLink }}" target="_blank" rel="noopener" style="border-bottom:none;display:flex;height:100%">
+          <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="xl" interactive="{{ true }}" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-4);height:100%">
+            <span style="width:44px;height:44px;border-radius:var(--radius-pill);background:var(--green-100);color:var(--green-700);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg></span>
+            <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);color:var(--text-heading);margin:0">WhatsApp</h2>
+            <p style="font-size:var(--text-sm);color:var(--neutral-600);margin:0">(21) 99313-8678. Canal principal para agendamentos e dúvidas.</p>
+          </div></x-import>
+        </a>
+        <a href="https://instagram.com/marianaveiga2" target="_blank" rel="noopener" style="border-bottom:none;display:flex;height:100%">
+          <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="xl" interactive="{{ true }}" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-4);height:100%">
+            <span style="width:44px;height:44px;border-radius:var(--radius-pill);background:var(--green-100);color:var(--green-700);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg></span>
+            <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);color:var(--text-heading);margin:0">Instagram</h2>
+            <p style="font-size:var(--text-sm);color:var(--neutral-600);margin:0">@marianaveiga2. Receitas, orientações e o dia a dia do consultório.</p>
+          </div></x-import>
+        </a>
+        <a href="mailto:marianaveiga66@gmail.com" style="border-bottom:none;display:flex;height:100%">
+          <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="xl" interactive="{{ true }}" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-4);height:100%">
+            <span style="width:44px;height:44px;border-radius:var(--radius-pill);background:var(--green-100);color:var(--green-700);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span>
+            <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);color:var(--text-heading);margin:0">E-mail</h2>
+            <p style="font-size:var(--text-sm);color:var(--neutral-600);margin:0">marianaveiga66@gmail.com. Indicado para envio de exames e documentos.</p>
+          </div></x-import>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="background:var(--green-50);padding:var(--space-12) var(--gutter-page-lg)">
+    <div style="max-width:var(--content-max);margin:0 auto">
+      <div class="split" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-11);align-items:start">
+        <div>
+          <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Onde fica</div>
+          <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:22ch;margin:0 0 var(--space-8)">R. Jardim Botânico, 568, sala 212 A.</h2>
+          <div style="display:flex;flex-direction:column;gap:var(--space-6)">
+            <div style="display:flex;gap:var(--space-5)">
+              <span style="color:var(--green-700);flex:none;padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg></span>
+              <div><div style="font-weight:var(--weight-semibold);color:var(--text-heading);margin-bottom:4px">Horário</div>
+              <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Segunda a sexta, 08h às 17h · Sábados (eventual), 08h às 14h</div></div>
+            </div>
+            <div style="display:flex;gap:var(--space-5)">
+              <span style="color:var(--green-700);flex:none;padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span>
+              <div><div style="font-weight:var(--weight-semibold);color:var(--text-heading);margin-bottom:4px">Estacionamento</div>
+              <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Rotativo coberto e manobrista no próprio prédio.</div></div>
+            </div>
+            <div style="display:flex;gap:var(--space-5)">
+              <span style="color:var(--green-700);flex:none;padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></span>
+              <div><div style="font-weight:var(--weight-semibold);color:var(--text-heading);margin-bottom:4px">Online</div>
+              <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Atendimento por videochamada para todo o Brasil.</div></div>
+            </div>
+          </div>
+        </div>
+        <iframe title="Mapa do consultório" src="https://maps.google.com/maps?q=R.%20Jardim%20Bot%C3%A2nico%2C%20568%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022461-000&amp;z=16&amp;output=embed" style="width:100%;height:100%;min-height:380px;border:0;border-radius:var(--radius-xl)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding:var(--space-12) var(--gutter-page-lg)">
+    <div style="max-width:var(--content-max);margin:0 auto;background:var(--green-900);border-radius:var(--radius-2xl);padding:var(--space-11);display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;justify-content:space-between">
+      <div>
+        <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:var(--leading-snug);color:var(--neutral-0);max-width:24ch;margin:0 0 var(--space-4)">Pronta para começar?</h2>
+        <p style="margin:0;font-size:var(--text-sm);color:rgba(255,255,255,.7);max-width:46ch">Chame no WhatsApp e a gente marca o melhor horário para você.</p>
+      </div>
+      <a href="{{ waLink }}" target="_blank" rel="noopener" style="border-bottom:none">
+        <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Button" variant="inverse" size="lg" hint-size="240px,52px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>Falar no WhatsApp</x-import>
+      </a>
+    </div>
+  </section>
+
+  <footer class="band" style="background:var(--green-900);padding:var(--space-11) var(--gutter-page-lg) var(--space-8)">
+    <div class="cols-3" style="max-width:var(--content-max);margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--space-10)">
+      <div>
+        <img src="assets/ds-logo-inverse.png" alt="Mariana Veiga" style="height:92px;width:auto;object-fit:contain">
+        <p style="color:rgba(255,255,255,.6);font-size:var(--text-sm);max-width:34ch;margin:var(--space-6) 0 0">Nutricionista clínica e esportiva, CRN 03100290. Jardim Botânico, Rio de Janeiro.</p>
+      </div>
+      <div>
+        <div style="color:var(--green-300);font-size:var(--text-xs);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;font-weight:var(--weight-bold);margin-bottom:var(--space-5)">Navegação</div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <a href="Sobre.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Sobre</a>
+          <a href="Atuacao.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Atuação</a>
+          <a href="Atendimento.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Atendimento</a>
+          <a href="Blog.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Conteúdo</a>
+          <a href="Duvidas.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Dúvidas</a>
+          <a href="Contato.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Contato</a>
+        </div>
+      </div>
+      <div>
+        <div style="color:var(--green-300);font-size:var(--text-xs);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;font-weight:var(--weight-bold);margin-bottom:var(--space-5)">Contato</div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <a href="{{ waLink }}" target="_blank" rel="noopener" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">WhatsApp (21) 99313-8678</a>
+          <a href="https://instagram.com/marianaveiga2" target="_blank" rel="noopener" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Instagram @marianaveiga2</a>
+          <a href="mailto:marianaveiga66@gmail.com" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">marianaveiga66@gmail.com</a>
+          <span style="color:rgba(255,255,255,.55);font-size:var(--text-sm);line-height:var(--leading-normal)">R. Jardim Botânico, 568, sala 212 A<br>Jardim Botânico, Rio de Janeiro - RJ</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:var(--content-max);margin:var(--space-9) auto 0;padding-top:var(--space-6);border-top:1px solid rgba(146,205,177,.22);color:rgba(255,255,255,.45);font-size:var(--text-xs)">© 2026 Mariana Veiga Nutrição · CRN 03100290</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      waLink: "https://api.whatsapp.com/send/?phone=5521993138678&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Mariana%20Veiga.&type=phone_number&app_absent=0",
+      toggleNav: () => {
+        const h = document.getElementById('siteHeader');
+        if (h) h.classList.toggle('nav-open');
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

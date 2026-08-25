@@ -1,0 +1,3 @@
+/* Webfonts served from Google Fonts CDN (substitution — see readme.md "Type substitution").
+   Jost stands in for the geometric sans of the Mariana Veiga wordmark; Manrope carries UI + body copy. */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,300..600&family=Manrope:wght@400..800&display=swap");

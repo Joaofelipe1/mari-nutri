@@ -1,0 +1,15 @@
+:root{
+/* Text */
+--text-heading:var(--green-900);--text-body:var(--neutral-800);--text-muted:var(--neutral-500);
+--text-inverse:var(--neutral-0);--text-brand:var(--green-700);--text-link:var(--green-700);--text-link-hover:var(--green-900);
+/* Surfaces */
+--surface-page:var(--neutral-50);--surface-card:var(--neutral-0);--surface-sunken:var(--neutral-100);
+--surface-brand:var(--green-700);--surface-brand-soft:var(--green-100);--surface-sage:var(--green-300);
+--surface-dark:var(--green-900);--surface-overlay:rgba(0,46,32,.42);
+/* Lines */
+--border-subtle:var(--neutral-200);--border-default:var(--neutral-300);--border-brand:var(--green-700);
+/* Controls */
+--control-height-sm:34px;--control-height-md:42px;--control-height-lg:52px;
+--control-padding-x:18px;--control-radius:var(--radius-pill);
+--focus-ring:var(--shadow-focus);
+}

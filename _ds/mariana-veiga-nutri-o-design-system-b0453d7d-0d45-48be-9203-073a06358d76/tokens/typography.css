@@ -1,0 +1,12 @@
+:root{
+--font-display:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+--font-body:"Manrope","Jost",system-ui,sans-serif;
+--font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace;
+/* Type scale — 1.25 major third, 16px base */
+--text-2xs:11px;--text-xs:12px;--text-sm:14px;--text-base:16px;--text-md:18px;--text-lg:20px;
+--text-xl:24px;--text-2xl:30px;--text-3xl:38px;--text-4xl:48px;--text-5xl:60px;--text-6xl:76px;
+--leading-tight:1.08;--leading-snug:1.2;--leading-normal:1.5;--leading-relaxed:1.65;
+--weight-light:300;--weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;
+/* Wordmark-style tracking: the logo is wide, all-caps, light weight */
+--tracking-wordmark:0.14em;--tracking-eyebrow:0.18em;--tracking-display:-0.01em;--tracking-normal:0;
+}

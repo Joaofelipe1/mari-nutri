@@ -1,0 +1,7 @@
+body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-relaxed);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5{font-family:var(--font-display);color:var(--text-heading);font-weight:var(--weight-medium);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);margin:0 0 var(--space-4)}
+p{margin:0 0 var(--space-5);text-wrap:pretty}
+a{color:var(--text-link);text-decoration:none;border-bottom:1px solid var(--green-300);transition:color var(--duration-fast) var(--ease-standard),border-color var(--duration-fast) var(--ease-standard)}
+a:hover{color:var(--text-link-hover);border-bottom-color:var(--green-700)}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--green-200);color:var(--green-900)}
