@@ -46,19 +46,19 @@
 <div style="background:var(--surface-card);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-relaxed)">
 
   <header id="siteHeader" class="band" style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-5) var(--space-8);padding:var(--space-5) var(--gutter-page-lg);background:var(--surface-card);border-bottom:1px solid var(--border-subtle);position:sticky;top:0;z-index:30">
-    <a href="Site Mariana Veiga.dc.html" style="margin-right:auto;display:inline-flex;border-bottom:none">
+    <a href="index.html" style="margin-right:auto;display:inline-flex;border-bottom:none">
       <img class="brand-logo" src="assets/ds-logo.png" alt="Mariana Veiga Nutrição Clínica e Esportiva" style="height:56px;width:auto;object-fit:contain">
     </a>
     <button onClick="{{ toggleNav }}" class="nav-toggle" aria-label="Menu" style="background:none;border:1px solid var(--border-default);border-radius:var(--radius-pill);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--green-700)">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="17" y2="17"></line></svg>
     </button>
     <nav class="nav-links" style="align-items:center;gap:var(--space-7);flex-wrap:wrap">
-      <a href="Sobre.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Sobre</a>
-      <a href="Atuacao.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Atuação</a>
-      <a href="Atendimento.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Atendimento</a>
-      <a href="Blog.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Conteúdo</a>
-      <a href="Duvidas.dc.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Dúvidas</a>
-      <a href="Contato.dc.html" style="border-bottom:none">
+      <a href="sobre.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Sobre</a>
+      <a href="atuacao.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Atuação</a>
+      <a href="atendimento.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Atendimento</a>
+      <a href="blog.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Conteúdo</a>
+      <a href="duvidas.html" style="color:var(--neutral-600);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:.02em;border-bottom:1px solid var(--green-300);padding-bottom:2px">Dúvidas</a>
+      <a href="contato.html" style="border-bottom:none">
         <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Button" size="sm" hint-size="150px,34px">Agendar consulta</x-import>
       </a>
     </nav>
@@ -75,7 +75,7 @@
             <a href="{{ waLink }}" target="_blank" rel="noopener" style="border-bottom:none">
               <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Button" size="lg" hint-size="220px,52px">Agendar consulta<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></x-import>
             </a>
-            <a href="Atuacao.dc.html" style="border-bottom:none">
+            <a href="atuacao.html" style="border-bottom:none">
               <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Button" size="lg" variant="secondary" hint-size="190px,52px">Ver áreas de atuação</x-import>
             </a>
           </div>
@@ -110,7 +110,7 @@
       <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Por onde começar</div>
       <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:22ch;margin:0 0 var(--space-9)">Conheça o trabalho antes de agendar.</h2>
       <div class="cols-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)">
-        <a href="Sobre.dc.html" style="border-bottom:none;display:flex">
+        <a href="sobre.html" style="border-bottom:none;display:flex">
           <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="xl" interactive="{{ true }}" hint-size="100%,160px"><div style="display:flex;gap:var(--space-6);align-items:flex-start">
             <span style="width:44px;height:44px;flex:none;border-radius:var(--radius-pill);background:var(--green-100);color:var(--green-700);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg></span>
             <div style="flex:1">
@@ -120,7 +120,7 @@
             </div>
           </div></x-import>
         </a>
-        <a href="Atuacao.dc.html" style="border-bottom:none;display:flex">
+        <a href="atuacao.html" style="border-bottom:none;display:flex">
           <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="xl" interactive="{{ true }}" hint-size="100%,160px"><div style="display:flex;gap:var(--space-6);align-items:flex-start">
             <span style="width:44px;height:44px;flex:none;border-radius:var(--radius-pill);background:var(--green-100);color:var(--green-700);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 21h10"></path><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"></path><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"></path><path d="m13 12 4-4"></path><path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2"></path></svg></span>
             <div style="flex:1">
@@ -130,7 +130,7 @@
             </div>
           </div></x-import>
         </a>
-        <a href="Atendimento.dc.html" style="border-bottom:none;display:flex">
+        <a href="atendimento.html" style="border-bottom:none;display:flex">
           <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="xl" interactive="{{ true }}" hint-size="100%,160px"><div style="display:flex;gap:var(--space-6);align-items:flex-start">
             <span style="width:44px;height:44px;flex:none;border-radius:var(--radius-pill);background:var(--green-100);color:var(--green-700);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></span>
             <div style="flex:1">
@@ -184,7 +184,7 @@
           <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Conteúdo</div>
           <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:24ch;margin:0">Para ler entre uma consulta e outra.</h2>
         </div>
-        <a href="Blog.dc.html" style="border-bottom:none">
+        <a href="blog.html" style="border-bottom:none">
           <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Button" variant="ghost" hint-size="170px,42px">Todos os textos<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></x-import>
         </a>
       </div>
@@ -226,12 +226,12 @@
       <div>
         <div style="color:var(--green-300);font-size:var(--text-xs);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;font-weight:var(--weight-bold);margin-bottom:var(--space-5)">Navegação</div>
         <div style="display:flex;flex-direction:column;gap:var(--space-4)">
-          <a href="Sobre.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Sobre</a>
-          <a href="Atuacao.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Atuação</a>
-          <a href="Atendimento.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Atendimento</a>
-          <a href="Blog.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Conteúdo</a>
-          <a href="Duvidas.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Dúvidas</a>
-          <a href="Contato.dc.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Contato</a>
+          <a href="sobre.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Sobre</a>
+          <a href="atuacao.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Atuação</a>
+          <a href="atendimento.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Atendimento</a>
+          <a href="blog.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Conteúdo</a>
+          <a href="duvidas.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Dúvidas</a>
+          <a href="contato.html" style="color:rgba(255,255,255,.72);font-size:var(--text-sm);border-bottom:none">Contato</a>
         </div>
       </div>
       <div>
@@ -253,9 +253,9 @@ const SANITY = { projectId: "pry4jigl", dataset: "production", apiVersion: "2024
 const HOME_POSTS_QUERY = '*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc)[0...3]{ title, "slug": slug.current, "date": coalesce(publishedAt, _createdAt), "tag": coalesce(categories[0]->title, "Nutrição"), "excerpt": coalesce(excerpt, pt::text(body)) }';
 
 const SAMPLE_HOME_POSTS = [
-  { tag: "Menopausa", date: "12 de agosto de 2026", title: "Proteína na perimenopausa: quanto é suficiente?", excerpt: "Por que a necessidade de proteína aumenta nessa fase e como distribuí-la ao longo do dia sem complicar a rotina.", href: "Post.dc.html#proteina-perimenopausa" },
-  { tag: "Emagrecimento", date: "29 de julho de 2026", title: "Por que dietas muito restritivas não se sustentam", excerpt: "O que acontece com o corpo e com a adesão quando o plano alimentar ignora a sua rotina real.", href: "Post.dc.html#dietas-restritivas" },
-  { tag: "Nutrição esportiva", date: "15 de julho de 2026", title: "O que comer antes de treinar de manhã", excerpt: "Treinar em jejum ou comer antes? Depende do treino, do objetivo e de como o seu corpo responde.", href: "Post.dc.html#treinar-de-manha" }
+  { tag: "Menopausa", date: "12 de agosto de 2026", title: "Proteína na perimenopausa: quanto é suficiente?", excerpt: "Por que a necessidade de proteína aumenta nessa fase e como distribuí-la ao longo do dia sem complicar a rotina.", href: "post.html#proteina-perimenopausa" },
+  { tag: "Emagrecimento", date: "29 de julho de 2026", title: "Por que dietas muito restritivas não se sustentam", excerpt: "O que acontece com o corpo e com a adesão quando o plano alimentar ignora a sua rotina real.", href: "post.html#dietas-restritivas" },
+  { tag: "Nutrição esportiva", date: "15 de julho de 2026", title: "O que comer antes de treinar de manhã", excerpt: "Treinar em jejum ou comer antes? Depende do treino, do objetivo e de como o seu corpo responde.", href: "post.html#treinar-de-manha" }
 ];
 
 class Component extends DCLogic {
@@ -279,7 +279,7 @@ class Component extends DCLogic {
               date,
               title: p.title,
               excerpt: raw.length > 150 ? raw.slice(0, 150).replace(/\s+\S*$/, "") + "…" : raw,
-              href: "Post.dc.html#" + p.slug
+              href: "post.html#" + p.slug
             };
           })
         });
