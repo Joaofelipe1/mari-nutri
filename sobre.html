@@ -38,6 +38,7 @@
       .nav-toggle { display: inline-flex; }
       .split { grid-template-columns: 1fr !important; }
       .cols-3 { grid-template-columns: 1fr !important; }
+      .cols-4 { grid-template-columns: 1fr 1fr !important; }
       .cols-2 { grid-template-columns: 1fr !important; }
       .band { padding-left: var(--gutter-page) !important; padding-right: var(--gutter-page) !important; }
     }
@@ -111,29 +112,34 @@
 
   <section class="band" style="background:var(--green-900);padding:var(--space-12) var(--gutter-page-lg)">
     <div style="max-width:var(--content-max);margin:0 auto">
-      <div class="split" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--space-11);align-items:center">
+      <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:flex-end;justify-content:space-between;margin-bottom:var(--space-10)">
         <div>
           <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-300);margin-bottom:var(--space-5)">Princípios</div>
-          <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--neutral-0);max-width:22ch;margin:0 0 var(--space-8)">O plano é um guia, não um contrato.</h2>
-          <img src="assets/ds-apple.png" alt="" style="height:78px;filter:brightness(1.5)">
+          <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--neutral-0);max-width:26ch;margin:0">Quatro coisas que orientam todo atendimento.</h2>
         </div>
-        <div style="display:flex;flex-direction:column;gap:var(--space-6)">
-          <div style="display:flex;gap:var(--space-5);padding-top:var(--space-6);border-top:1px solid rgba(146,205,177,.28)">
-            <span style="color:var(--green-300);flex:none;padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>
-            <div><div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:6px">Nada de alimento proibido</div>
-            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal)">Restrição sem motivo clínico não melhora exame nenhum: só piora a adesão.</div></div>
+        <img src="assets/ds-apple.png" alt="" style="height:78px;filter:brightness(1.5)">
+      </div>
+      <div class="cols-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-7)">
+          <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+            <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">01</span>
+            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Escuta antes de prescrição</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">A primeira consulta é mais tempo ouvindo do que falando. Horários, orçamento, treino e o que você realmente gosta de comer entram na conta antes de qualquer cardápio.</div>
           </div>
-          <div style="display:flex;gap:var(--space-5);padding-top:var(--space-6);border-top:1px solid rgba(146,205,177,.28)">
-            <span style="color:var(--green-300);flex:none;padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>
-            <div><div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:6px">Ajuste antes de recomeçar</div>
-            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal)">Se um dia sair da rota, retome na próxima refeição. Não existe semana perdida.</div></div>
+          <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+            <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">02</span>
+            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Sem alimento proibido</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Restrição sem motivo clínico não melhora exame nenhum: só piora a adesão. O que existe é frequência, quantidade e contexto.</div>
           </div>
-          <div style="display:flex;gap:var(--space-5);padding-top:var(--space-6);border-top:1px solid rgba(146,205,177,.28)">
-            <span style="color:var(--green-300);flex:none;padding-top:2px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>
-            <div><div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:6px">Decisão compartilhada</div>
-            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal)">Você entende o porquê de cada mudança. Plano que não se explica não se sustenta.</div></div>
+          <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+            <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">03</span>
+            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Cada mudança tem explicação</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Você sai da consulta sabendo por que cada ajuste foi feito. Plano que não se explica não sobrevive à primeira semana difícil.</div>
           </div>
-        </div>
+          <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
+            <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">04</span>
+            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Recomeço é parte do processo</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Saiu da rota em um jantar? Retome na refeição seguinte. Não existe semana perdida, existe ajuste no retorno.</div>
+          </div>
       </div>
     </div>
   </section>
