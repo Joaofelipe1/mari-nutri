@@ -32,7 +32,7 @@
     details[open] > .faq-q .i-down { display: none; }
     details[open] > .faq-q .i-up { display: block; }
     @media (max-width: 900px) {
-      .brand-logo { height: 44px !important; }
+      .brand-logo { height: 38px !important; } .brand-name { font-size: 17px !important; } .brand-sub { font-size: 8.5px !important; }
       .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: var(--space-5); width: 100%; padding-top: var(--space-5); }
       .nav-open .nav-links { display: flex; }
       .nav-toggle { display: inline-flex; }
@@ -46,8 +46,12 @@
 <div style="background:var(--surface-card);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-relaxed);min-height:100vh">
 
   <header id="siteHeader" class="band" style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-5) var(--space-8);padding:var(--space-5) var(--gutter-page-lg);background:var(--surface-card);border-bottom:1px solid var(--border-subtle);position:sticky;top:0;z-index:30">
-    <a href="index.html" style="margin-right:auto;display:inline-flex;border-bottom:none">
-      <img class="brand-logo" src="assets/ds-logo.png" alt="Mariana Veiga Nutrição Clínica e Esportiva" style="height:56px;width:auto;object-fit:contain">
+    <a href="index.html" aria-label="Mariana Veiga, nutrição clínica e esportiva" style="margin-right:auto;display:inline-flex;align-items:center;gap:var(--space-4);border-bottom:none">
+      <img class="brand-logo" src="assets/ds-apple.png" alt="" style="height:48px;width:auto;object-fit:contain">
+      <span style="display:flex;flex-direction:column;gap:5px">
+        <span class="brand-name" style="font-family:var(--font-display);font-weight:500;font-size:21px;line-height:1;letter-spacing:var(--tracking-wordmark);text-transform:uppercase;color:var(--green-700)">Mariana Veiga</span>
+        <span class="brand-sub" style="font-family:var(--font-display);font-weight:400;font-size:10px;line-height:1;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--neutral-500)">Nutrição clínica e esportiva</span>
+      </span>
     </a>
     <button onClick="{{ toggleNav }}" class="nav-toggle" aria-label="Menu" style="background:none;border:1px solid var(--border-default);border-radius:var(--radius-pill);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--green-700)">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="17" y2="17"></line></svg>
@@ -166,7 +170,13 @@
   <footer class="band" style="background:var(--green-900);padding:var(--space-11) var(--gutter-page-lg) var(--space-8)">
     <div class="cols-3" style="max-width:var(--content-max);margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--space-10)">
       <div>
-        <img src="assets/ds-logo-inverse.png" alt="Mariana Veiga" style="height:92px;width:auto;object-fit:contain">
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <img src="assets/ds-apple-inverse.png" alt="" style="height:78px;width:auto;object-fit:contain;align-self:flex-start">
+          <span style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-family:var(--font-display);font-weight:500;font-size:24px;line-height:1;letter-spacing:var(--tracking-wordmark);text-transform:uppercase;color:#fff">Mariana Veiga</span>
+            <span style="font-family:var(--font-display);font-weight:400;font-size:11px;line-height:1;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-300)">Nutrição clínica e esportiva</span>
+          </span>
+        </div>
         <p style="color:rgba(255,255,255,.6);font-size:var(--text-sm);max-width:34ch;margin:var(--space-6) 0 0">Nutricionista clínica e esportiva, CRN 03100290. Jardim Botânico, Rio de Janeiro.</p>
       </div>
       <div>

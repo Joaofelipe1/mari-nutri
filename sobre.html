@@ -32,7 +32,7 @@
     details[open] > .faq-q .i-down { display: none; }
     details[open] > .faq-q .i-up { display: block; }
     @media (max-width: 900px) {
-      .brand-logo { height: 44px !important; }
+      .brand-logo { height: 38px !important; } .brand-name { font-size: 17px !important; } .brand-sub { font-size: 8.5px !important; }
       .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: var(--space-5); width: 100%; padding-top: var(--space-5); }
       .nav-open .nav-links { display: flex; }
       .nav-toggle { display: inline-flex; }
@@ -47,8 +47,12 @@
 <div style="background:var(--surface-card);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-relaxed);min-height:100vh">
 
   <header id="siteHeader" class="band" style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-5) var(--space-8);padding:var(--space-5) var(--gutter-page-lg);background:var(--surface-card);border-bottom:1px solid var(--border-subtle);position:sticky;top:0;z-index:30">
-    <a href="index.html" style="margin-right:auto;display:inline-flex;border-bottom:none">
-      <img class="brand-logo" src="assets/ds-logo.png" alt="Mariana Veiga Nutrição Clínica e Esportiva" style="height:56px;width:auto;object-fit:contain">
+    <a href="index.html" aria-label="Mariana Veiga, nutrição clínica e esportiva" style="margin-right:auto;display:inline-flex;align-items:center;gap:var(--space-4);border-bottom:none">
+      <img class="brand-logo" src="assets/ds-apple.png" alt="" style="height:48px;width:auto;object-fit:contain">
+      <span style="display:flex;flex-direction:column;gap:5px">
+        <span class="brand-name" style="font-family:var(--font-display);font-weight:500;font-size:21px;line-height:1;letter-spacing:var(--tracking-wordmark);text-transform:uppercase;color:var(--green-700)">Mariana Veiga</span>
+        <span class="brand-sub" style="font-family:var(--font-display);font-weight:400;font-size:10px;line-height:1;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--neutral-500)">Nutrição clínica e esportiva</span>
+      </span>
     </a>
     <button onClick="{{ toggleNav }}" class="nav-toggle" aria-label="Menu" style="background:none;border:1px solid var(--border-default);border-radius:var(--radius-pill);width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;color:var(--green-700)">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="17" y2="17"></line></svg>
@@ -72,8 +76,9 @@
         <div>
           <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Sobre</div>
           <h1 style="font-family:var(--font-display);font-size:var(--text-4xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:20ch;margin:0 0 var(--space-6)">Nutrição baseada em evidência, feita com escuta.</h1>
-          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-5)">Sou Mariana Veiga, nutricionista clínica e esportiva, formada pelas Faculdades Integradas Bennett em 2004. Atendo em consultório particular no Jardim Botânico, no Rio de Janeiro, e online para pacientes de todo o Brasil.</p>
-          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-7)">Meu trabalho começa por entender sua rotina: horários, treino, orçamento e o que você gosta de comer. Só depois vem o plano, porque um cardápio que ignora a sua vida real não se sustenta por mais de duas semanas.</p>
+          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-5)">Sou Mariana Veiga, nutricionista clínica e esportiva, formada pelas Faculdades Integradas Bennett em 2004. Atendi por muitos anos em academias e como personal diet. Hoje atendo presencialmente em consultório particular no Jardim Botânico e também online.</p>
+          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-7)">Meu trabalho começa por entender sua rotina: hábitos, horários, treinos, condições financeiras, logística de vida, objetivos, quadro clínico e psíquico e preferências alimentares. A partir de tudo isso elaboro o planejamento alimentar, que vai sendo ajustado ao longo do acompanhamento.</p>
+          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-7)">A primeira consulta dura 1 hora e inclui avaliação clínica e física, interpretação de exames laboratoriais, prescrição de manipulados fitoterápicos, suplementação e o planejamento alimentar. Uso um aplicativo interativo, que deixa o acompanhamento mais dinâmico no dia a dia.</p>
           <div style="display:flex;gap:var(--space-4);flex-wrap:wrap">
             <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">Faculdades Bennett</x-import>
             <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">CRN 03100290</x-import>
@@ -99,12 +104,12 @@
           <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Atendimento a atletas profissionais, amadores e praticante de atividades físicas. Com foco em performance, composição corporal e resultados</div>
         </div></x-import>
         <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="lg" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-3)">
-          <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:var(--weight-medium);line-height:var(--leading-snug);color:var(--text-heading)">Ambulatório da Santa Casa</div>
-          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Atendimento clínico de condições metabólicas e crônicas, onde aprendi a conduzir tratamento nutricional junto a equipes médicas e exames.</div>
+          <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:var(--weight-medium);line-height:var(--leading-snug);color:var(--text-heading)">Academias e personal diet</div>
+          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Anos de atendimento dentro de academias e como personal diet, acompanhando de perto a rotina de treino e a alimentação de cada pessoa.</div>
         </div></x-import>
         <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="lg" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-3)">
           <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:var(--weight-medium);line-height:var(--leading-snug);color:var(--text-heading)">Prática atual</div>
-          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Mais de 1500 pacientes acompanhados, no consultório e online, com plano entregue por aplicativo e ajustes ao longo do processo.</div>
+          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Mais de 1000 pacientes acompanhados, no consultório e online. As reavaliações duram 30 minutos e são marcadas a cada 30, 60 ou 90 dias, conforme o objetivo: refazemos as medições de composição corporal e ajustamos a dieta.</div>
         </div></x-import>
       </div>
     </div>
@@ -159,7 +164,13 @@
   <footer class="band" style="background:var(--green-900);padding:var(--space-11) var(--gutter-page-lg) var(--space-8)">
     <div class="cols-3" style="max-width:var(--content-max);margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--space-10)">
       <div>
-        <img src="assets/ds-logo-inverse.png" alt="Mariana Veiga" style="height:92px;width:auto;object-fit:contain">
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <img src="assets/ds-apple-inverse.png" alt="" style="height:78px;width:auto;object-fit:contain;align-self:flex-start">
+          <span style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-family:var(--font-display);font-weight:500;font-size:24px;line-height:1;letter-spacing:var(--tracking-wordmark);text-transform:uppercase;color:#fff">Mariana Veiga</span>
+            <span style="font-family:var(--font-display);font-weight:400;font-size:11px;line-height:1;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-300)">Nutrição clínica e esportiva</span>
+          </span>
+        </div>
         <p style="color:rgba(255,255,255,.6);font-size:var(--text-sm);max-width:34ch;margin:var(--space-6) 0 0">Nutricionista clínica e esportiva, CRN 03100290. Jardim Botânico, Rio de Janeiro.</p>
       </div>
       <div>
