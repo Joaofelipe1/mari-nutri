@@ -83,42 +83,52 @@
   </section>
 
   <section class="band" style="padding:var(--space-12) var(--gutter-page-lg)">
-    <div style="max-width:var(--content-max);margin:0 auto;display:flex;flex-direction:column;gap:var(--space-9)">
-      <div class="split" style="display:grid;grid-template-columns:.95fr 1.05fr;gap:var(--space-10);align-items:center">
-        <img src="./assets/consultorio-mesa2.jpg" alt="Consultório particular" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 50%;border-radius:var(--radius-xl);order:1">
-        <div style="order:2">
-          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--text-heading);margin:0 0 var(--space-4)">Consultório particular</h2>
-          <p style="color:var(--neutral-600);max-width:46ch;margin:0 0 var(--space-6)">Atendimento presencial no Jardim Botânico, com estrutura completa para avaliação clínica, física e comportamental.</p>
-          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Avaliação antropométrica completa</div>
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Consulta inicial de 60 minutos</div>
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Reavaliações a cada 30, 60 ou 90 dias</div>
-          </div>
+    <div style="max-width:var(--content-max);margin:0 auto">
+      <div class="split" style="display:grid;grid-template-columns:88px minmax(0,1fr) 240px;gap:var(--space-8);align-items:start;padding:0 0 var(--space-10);">
+        <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+          <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:1;color:var(--green-600)">01</span>
+          <span style="font-family:var(--font-display);font-size:var(--text-xs);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700)">Presencial</span>
         </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);margin:0">Consultório particular</h2>
+          <p style="font-size:var(--text-md);line-height:var(--leading-relaxed);color:var(--neutral-600);margin:0;max-width:46ch">Sala própria no Jardim Botânico, com estrutura completa para avaliação clínica, física e comportamental. É onde dá para medir, conversar sem pressa e sair com o plano já explicado.</p>
+          <ul style="list-style:none;margin:var(--space-2) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)">
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Avaliação antropométrica completa</span></li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Consulta inicial de 60 minutos</span></li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Reavaliações a cada 30, 60 ou 90 dias</span></li>
+          </ul>
+        </div>
+        <img src="./assets/mariana-avaliacao.jpg" alt="Consultório particular" style="width:100%;max-width:240px;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%;border-radius:var(--radius-lg);display:block">
       </div>
-      <div class="split" style="display:grid;grid-template-columns:1.05fr .95fr;gap:var(--space-10);align-items:center">
-        <img src="assets/online.jpeg" alt="Consulta online" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 15%;border-radius:var(--radius-xl);order:2">
-        <div style="order:1">
-          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--text-heading);margin:0 0 var(--space-4)">Consulta online</h2>
-          <p style="color:var(--neutral-600);max-width:46ch;margin:0 0 var(--space-6)">Acompanhamento completo por videochamada, para quem está fora do Rio ou prefere a praticidade de casa.</p>
-          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Mesma profundidade da consulta presencial</div>
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Orientação prévia para medidas e registros</div>
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Horários flexíveis, sem deslocamento</div>
-          </div>
+      <div class="split" style="display:grid;grid-template-columns:88px minmax(0,1fr) 240px;gap:var(--space-8);align-items:start;padding:var(--space-10) 0;border-top:1px solid var(--border-subtle);">
+        <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+          <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:1;color:var(--green-600)">02</span>
+          <span style="font-family:var(--font-display);font-size:var(--text-xs);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700)">À distância</span>
         </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);margin:0">Consulta online</h2>
+          <p style="font-size:var(--text-md);line-height:var(--leading-relaxed);color:var(--neutral-600);margin:0;max-width:46ch">Acompanhamento por videochamada, para quem está fora do Rio ou prefere a praticidade de casa. A profundidade é a mesma da consulta presencial.</p>
+          <ul style="list-style:none;margin:var(--space-2) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)">
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Orientação prévia para medidas e registros</span></li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Horários flexíveis, sem deslocamento</span></li>
+          </ul>
+        </div>
+        <img src="./assets/consulta-online.jpg" alt="Consulta online" style="width:100%;max-width:240px;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;border-radius:var(--radius-lg);display:block">
       </div>
-      <div class="split" style="display:grid;grid-template-columns:.95fr 1.05fr;gap:var(--space-10);align-items:center">
-        <img src="./assets/pexels-readymade-3850213-mt7n6c4c-6924.jpg" alt="Acompanhamento por aplicativo" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 35%;border-radius:var(--radius-xl);order:1">
-        <div style="order:2">
-          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--text-heading);margin:0 0 var(--space-4)">Acompanhamento por aplicativo</h2>
-          <p style="color:var(--neutral-600);max-width:46ch;margin:0 0 var(--space-6)">A dieta é entregue por um aplicativo interativo, que fica com você entre uma consulta e outra.</p>
-          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Registro de refeições e água</div>
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Receitas e listas de substituição</div>
-            <div style="display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-sm);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span>Orientações ajustadas ao longo do mês</div>
-          </div>
+      <div class="split" style="display:grid;grid-template-columns:88px minmax(0,1fr) 240px;gap:var(--space-8);align-items:start;padding:var(--space-10) 0;border-top:1px solid var(--border-subtle);">
+        <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+          <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:1;color:var(--green-600)">03</span>
+          <span style="font-family:var(--font-display);font-size:var(--text-xs);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700)">Entre consultas</span>
         </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+          <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);margin:0">Acompanhamento por aplicativo</h2>
+          <p style="font-size:var(--text-md);line-height:var(--leading-relaxed);color:var(--neutral-600);margin:0;max-width:46ch">A dieta é entregue por um aplicativo interativo, que fica com você entre uma consulta e outra.</p>
+          <ul style="list-style:none;margin:var(--space-2) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)">
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Registro de refeições e água, receitas e listas de substituição</span></li>
+            <li style="display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-sm);line-height:var(--leading-normal);color:var(--neutral-700)"><span style="color:var(--green-600);flex:none;padding-top:3px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Orientações ajustadas ao longo do mês</span></li>
+          </ul>
+        </div>
+        <img src="./assets/aplicativo.jpg" alt="Acompanhamento por aplicativo" style="width:100%;max-width:240px;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;border-radius:var(--radius-lg);display:block">
       </div>
     </div>
   </section>
@@ -204,7 +214,7 @@
           </div>
           <div class="cols-2" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);margin-top:var(--space-3)">
             
-            <img src="./assets/WhatsApp Image 2026-05-26 at 12.33.55 (1) (1).jpeg" alt="Prédio do consultório" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-lg)"><img src="./assets/WhatsApp Image 2026-05-26 at 12.33.55.jpeg" alt="Prédio do consultório" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-lg)">
+            <img src="./assets/predio-consultorio.jpeg" alt="Entrada do prédio, na rua" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 32%;border-radius:var(--radius-lg)"><img src="./assets/fachada-touch.jpeg" alt="Prédio do consultório" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-lg)">
           </div>
         </div>
         <iframe title="Mapa do consultório" src="https://maps.google.com/maps?q=R.%20Jardim%20Bot%C3%A2nico%2C%20568%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022461-000&amp;z=16&amp;output=embed" style="width:100%;height:100%;min-height:480px;border:0;border-radius:var(--radius-xl)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
