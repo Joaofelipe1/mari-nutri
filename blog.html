@@ -72,11 +72,16 @@
 
   <section class="band" style="padding:var(--space-10) var(--gutter-page-lg) var(--space-13)">
     <div style="max-width:var(--content-max);margin:0 auto">
-      <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-bottom:var(--space-9)">
-        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
-          <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">{{ f }}</x-import>
-        </sc-for>
-      </div>
+      <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-bottom:var(--space-9)">
+          <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+            <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" selected="{{ f.selected }}" onClick="{{ f.onClick }}" hint-size="auto,28px">{{ f.label }}</x-import>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+        <p style="font-size:var(--text-sm);color:var(--neutral-600);margin:0">Os primeiros textos estão sendo escritos. Em breve eles aparecem aqui.</p>
+      </sc-if>
       <div class="cols-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)">
         <sc-for list="{{ posts }}" as="post" hint-placeholder-count="6">
           <a href="{{ post.href }}" style="text-decoration:none;color:inherit;display:block;height:100%">
@@ -152,15 +157,6 @@
 const SANITY = { projectId: "pry4jigl", dataset: "production", apiVersion: "2024-01-01" };
 const POSTS_QUERY = '*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc)[0...24]{ title, "slug": slug.current, "date": coalesce(publishedAt, _createdAt), "tag": coalesce(categories[0]->title, "Nutrição"), "excerpt": coalesce(excerpt, pt::text(body)) }';
 
-const SAMPLE_POSTS = [
-  { tag: "Rotina", date: "20 de agosto de 2026", title: "Cores no prato: por que variedade vale mais que superalimento", excerpt: "Nenhuma fruta isolada resolve a alimentação. O que muda o resultado é a diversidade ao longo da semana.", href: "post.html" },
-  { tag: "Menopausa", date: "12 de agosto de 2026", title: "Proteína na perimenopausa: quanto é suficiente?", excerpt: "Por que a necessidade de proteína aumenta nessa fase e como distribuí-la ao longo do dia sem complicar a rotina.", href: "post.html#proteina-perimenopausa" },
-  { tag: "Emagrecimento", date: "29 de julho de 2026", title: "Por que dietas muito restritivas não se sustentam", excerpt: "O que acontece com o corpo e com a adesão quando o plano alimentar ignora a sua rotina real.", href: "post.html#dietas-restritivas" },
-  { tag: "Nutrição esportiva", date: "15 de julho de 2026", title: "O que comer antes de treinar de manhã", excerpt: "Treinar em jejum ou comer antes? Depende do treino, do objetivo e de como o seu corpo responde.", href: "post.html#treinar-de-manha" },
-  { tag: "Rotina", date: "2 de julho de 2026", title: "Marmita da semana sem virar obrigação", excerpt: "Um método simples de preparo em blocos para quem cozinha pouco e não quer repetir a mesma refeição.", href: "post.html#marmita-da-semana" },
-  { tag: "Gestação", date: "18 de junho de 2026", title: "Ferro e ácido fólico na gravidez: o básico bem feito", excerpt: "Quais alimentos realmente ajudam, quando a suplementação entra e o que costuma gerar confusão.", href: "post.html#ferro-acido-folico" },
-  { tag: "Rotina", date: "4 de junho de 2026", title: "Como ler rótulos sem perder meia hora no mercado", excerpt: "Três informações que dizem mais sobre um produto do que a lista de alegações na frente da embalagem.", href: "post.html#ler-rotulos" }
-];
 
 class Component extends DCLogic {
   state = { livePosts: null };
@@ -192,12 +188,21 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const posts = this.state.livePosts || SAMPLE_POSTS;
-    const filters = ["Todos"].concat(posts.map(p => p.tag).filter((t, i, a) => a.indexOf(t) === i));
+    const all = this.state.livePosts || [];
+    const active = this.state.activeTag || "Todos";
+    const tags = ["Todos"].concat(all.map(p => p.tag).filter((t, i, a) => t && a.indexOf(t) === i));
+    const filters = tags.map(t => ({
+      label: t,
+      selected: t === active,
+      onClick: () => this.setState({ activeTag: t })
+    }));
+    const posts = active === "Todos" ? all : all.filter(p => p.tag === active);
     return {
       waLink: "https://api.whatsapp.com/send/?phone=5521993138678&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Mariana%20Veiga.&type=phone_number&app_absent=0",
       posts,
       filters,
+      hasFilters: filters.length > 1,
+      isEmpty: posts.length === 0,
       toggleNav: () => {
         const h = document.getElementById('siteHeader');
         if (h) h.classList.toggle('nav-open');

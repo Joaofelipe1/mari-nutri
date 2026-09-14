@@ -206,30 +206,7 @@ function toBlocks(body) {
     .filter(b => b.text);
 }
 
-const SAMPLE = {
-  tag: "Rotina",
-  date: "20 de agosto de 2026",
-  title: "Cores no prato: por que variedade vale mais que superalimento",
-  excerpt: "Nenhuma fruta isolada resolve a alimentação. O que muda o resultado é a diversidade ao longo da semana, e ela é mais simples de alcançar do que parece.",
-  hasCover: true,
-  blocks: [
-    { text: "É comum chegar ao consultório com uma lista de alimentos considerados essenciais e a sensação de que falta algo caro na dispensa. Na prática, o que aparece nos exames e no dia a dia é outra coisa: a variedade do conjunto pesa mais do que qualquer item isolado.", isHeading: false, isQuote: false, isText: true },
-    { text: "O que a cor indica", isHeading: true, isQuote: false, isText: false },
-    { text: "Cada cor sinaliza um grupo diferente de compostos bioativos. O vermelho do tomate e da groselha, o amarelo dos cítricos, o verde escuro das folhas e das ervas: são famílias distintas, com funções distintas no organismo. Repetir sempre a mesma fruta entrega sempre o mesmo conjunto.", isHeading: false, isQuote: false, isText: true },
-    { text: "Comer cinco cores diferentes ao longo da semana é mais eficaz, e mais barato, do que perseguir um único alimento da moda.", isHeading: false, isQuote: true, isText: false },
-    { text: "Como fazer isso caber na rotina", isHeading: true, isQuote: false, isText: false },
-    { text: "Compre o que está na safra: além de custar menos, a fruta da estação tem melhor sabor e melhor qualidade nutricional. Duas ou três opções por semana já garantem alternância sem sobrar comida na geladeira.", isHeading: false, isQuote: false, isText: true },
-    { text: "Deixe a fruta visível e lavada, em um ponto de passagem da casa. O que está à vista é o que se come nos intervalos entre reuniões e treinos.", isHeading: false, isQuote: false, isText: true },
-    { text: "Ervas frescas contam. Salsinha, coentro, cebolinha e manjericão acrescentam compostos protetores e reduzem a necessidade de sal na preparação.", isHeading: false, isQuote: false, isText: true },
-    { text: "Se hoje só couberam duas cores, está tudo bem: o alvo é a semana, não a refeição perfeita. Este texto é orientação geral, e a quantidade adequada para o seu caso depende de exames, histórico e rotina.", isHeading: false, isQuote: false, isText: true }
-  ]
-};
 
-const SAMPLE_RELATED = [
-  { tag: "Menopausa", date: "12 de agosto de 2026", title: "Proteína na perimenopausa: quanto é suficiente?", excerpt: "Por que a necessidade de proteína aumenta nessa fase e como distribuí-la ao longo do dia.", href: "post.html#proteina-perimenopausa" },
-  { tag: "Emagrecimento", date: "29 de julho de 2026", title: "Por que dietas muito restritivas não se sustentam", excerpt: "O que acontece com o corpo e com a adesão quando o plano alimentar ignora a sua rotina real.", href: "post.html#dietas-restritivas" },
-  { tag: "Nutrição esportiva", date: "15 de julho de 2026", title: "O que comer antes de treinar de manhã", excerpt: "Treinar em jejum ou comer antes? Depende do treino, do objetivo e de como o seu corpo responde.", href: "post.html#treinar-de-manha" },
-];
 
 class Component extends DCLogic {
   state = { post: null, related: null };
@@ -284,8 +261,8 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const post = this.state.post || SAMPLE;
-    const related = (this.state.related && this.state.related.length) ? this.state.related : SAMPLE_RELATED;
+    const post = this.state.post || { tag: "", date: "", title: "", excerpt: "", cover: "", coverAlt: "", coverCaption: "", blocks: [] };
+    const related = this.state.related || [];
     return {
       waLink: WA,
       post,

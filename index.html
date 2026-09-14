@@ -262,11 +262,6 @@
 const SANITY = { projectId: "pry4jigl", dataset: "production", apiVersion: "2024-01-01" };
 const HOME_POSTS_QUERY = '*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc)[0...3]{ title, "slug": slug.current, "date": coalesce(publishedAt, _createdAt), "tag": coalesce(categories[0]->title, "Nutrição"), "excerpt": coalesce(excerpt, pt::text(body)) }';
 
-const SAMPLE_HOME_POSTS = [
-  { tag: "Menopausa", date: "12 de agosto de 2026", title: "Proteína na perimenopausa: quanto é suficiente?", excerpt: "Por que a necessidade de proteína aumenta nessa fase e como distribuí-la ao longo do dia sem complicar a rotina.", href: "post.html#proteina-perimenopausa" },
-  { tag: "Emagrecimento", date: "29 de julho de 2026", title: "Por que dietas muito restritivas não se sustentam", excerpt: "O que acontece com o corpo e com a adesão quando o plano alimentar ignora a sua rotina real.", href: "post.html#dietas-restritivas" },
-  { tag: "Nutrição esportiva", date: "15 de julho de 2026", title: "O que comer antes de treinar de manhã", excerpt: "Treinar em jejum ou comer antes? Depende do treino, do objetivo e de como o seu corpo responde.", href: "post.html#treinar-de-manha" }
-];
 
 class Component extends DCLogic {
   state = { livePosts: null };
@@ -300,7 +295,7 @@ class Component extends DCLogic {
   renderVals() {
     return {
       waLink: "https://api.whatsapp.com/send/?phone=5521993138678&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Mariana%20Veiga.&type=phone_number&app_absent=0",
-      homePosts: this.state.livePosts || SAMPLE_HOME_POSTS,
+      homePosts: this.state.livePosts || [],
       toggleNav: () => {
         const h = document.getElementById('siteHeader');
         if (h) h.classList.toggle('nav-open');
