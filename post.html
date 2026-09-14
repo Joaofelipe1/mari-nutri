@@ -75,8 +75,10 @@
       <h1 style="font-family:var(--font-display);font-size:var(--text-4xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);margin:0 0 var(--space-6);text-wrap:pretty">{{ post.title }}</h1>
       <p style="font-size:var(--text-md);line-height:var(--leading-normal);color:var(--neutral-600);margin:0 0 var(--space-9);text-wrap:pretty">{{ post.excerpt }}</p>
       <figure style="margin:0 0 var(--space-9)">
-        <img src="assets/post-capa-variedade.jpg" alt="Maçãs, limões, tomates-cereja, groselhas e salsinha sobre uma mesa de madeira" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-2xl);display:block">
-        <figcaption style="margin-top:var(--space-4);font-size:var(--text-xs);color:var(--text-muted)">Variedade de cores em um mesmo dia costuma dizer mais sobre a qualidade da alimentação do que qualquer alimento isolado.</figcaption>
+        <img id="postCover" src="assets/post-capa-variedade.jpg" alt="Maçãs, limões, tomates-cereja, groselhas e salsinha sobre uma mesa de madeira" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-2xl);display:block">
+        <sc-if value="{{ post.hasCaption }}" hint-placeholder-val="{{ true }}">
+          <figcaption style="margin-top:var(--space-4);font-size:var(--text-xs);color:var(--text-muted)">{{ post.coverCaption }}</figcaption>
+        </sc-if>
       </figure>
       <div style="height:1px;background:var(--border-subtle);margin-bottom:var(--space-9)"></div>
 
@@ -170,7 +172,7 @@
 const SANITY = { projectId: "pry4jigl", dataset: "production", apiVersion: "2024-01-01" };
 const WA = "https://api.whatsapp.com/send/?phone=5521993138678&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Mariana%20Veiga.&type=phone_number&app_absent=0";
 
-const POST_QUERY = '{ "post": *[_type == "post" && slug.current == $slug][0]{ title, "slug": slug.current, "date": coalesce(publishedAt, _createdAt), "tag": coalesce(categories[0]->title, "Nutrição"), excerpt, body }, "related": *[_type == "post" && defined(slug.current) && slug.current != $slug] | order(coalesce(publishedAt, _createdAt) desc)[0...3]{ title, "slug": slug.current, "date": coalesce(publishedAt, _createdAt), "tag": coalesce(categories[0]->title, "Nutrição"), "excerpt": coalesce(excerpt, pt::text(body)) } }';
+const POST_QUERY = '{ "post": *[_type == "post" && slug.current == $slug][0]{ title, "slug": slug.current, "date": coalesce(publishedAt, _createdAt), "tag": coalesce(categories[0]->title, "Nutrição"), excerpt, body, "cover": mainImage.asset->url, "coverAlt": coalesce(mainImage.alt, mainImage.asset->altText, ""), "coverCaption": coalesce(mainImage.caption, "") }, "related": *[_type == "post" && defined(slug.current) && slug.current != $slug] | order(coalesce(publishedAt, _createdAt) desc)[0...3]{ title, "slug": slug.current, "date": coalesce(publishedAt, _createdAt), "tag": coalesce(categories[0]->title, "Nutrição"), "excerpt": coalesce(excerpt, pt::text(body)) } }';
 
 function queryUrl(query, params) {
   let url = "https://" + SANITY.projectId + ".apicdn.sanity.io/v" + SANITY.apiVersion +
@@ -211,6 +213,11 @@ const SAMPLE = {
   date: "20 de agosto de 2026",
   title: "Cores no prato: por que variedade vale mais que superalimento",
   excerpt: "Nenhuma fruta isolada resolve a alimentação. O que muda o resultado é a diversidade ao longo da semana, e ela é mais simples de alcançar do que parece.",
+  cover: "assets/post-capa-variedade.jpg",
+  coverAlt: "Maçãs, limões, tomates-cereja, groselhas e salsinha sobre uma mesa de madeira",
+  coverCaption: "Variedade de cores em um mesmo dia costuma dizer mais sobre a qualidade da alimentação do que qualquer alimento isolado.",
+  hasCaption: true,
+  hasCover: true,
   blocks: [
     { text: "É comum chegar ao consultório com uma lista de alimentos considerados essenciais e a sensação de que falta algo caro na dispensa. Na prática, o que aparece nos exames e no dia a dia é outra coisa: a variedade do conjunto pesa mais do que qualquer item isolado.", isHeading: false, isQuote: false, isText: true },
     { text: "O que a cor indica", isHeading: true, isQuote: false, isText: false },
@@ -248,6 +255,10 @@ class Component extends DCLogic {
             date: fmtDate(p.date),
             title: p.title,
             excerpt: trim(p.excerpt || "", 220),
+            cover: p.cover ? p.cover + "?w=1400&fit=max&auto=format" : SAMPLE.cover,
+            coverAlt: p.cover ? (p.coverAlt || "") : SAMPLE.coverAlt,
+            coverCaption: p.cover ? (p.coverCaption || "") : "",
+            hasCaption: p.cover ? !!p.coverCaption : false,
             blocks: toBlocks(p.body)
           },
           related: (res.related || []).map(r => ({
@@ -260,6 +271,15 @@ class Component extends DCLogic {
         });
       })
       .catch(() => {});
+  }
+
+  componentDidUpdate() {
+    const p = this.state.post;
+    const el = document.getElementById("postCover");
+    if (p && el && p.cover && el.getAttribute("src") !== p.cover) {
+      el.src = p.cover;
+      el.alt = p.coverAlt || "";
+    }
   }
 
   renderVals() {
