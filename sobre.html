@@ -8,6 +8,12 @@
 <body>
 <x-dc>
 <helmet>
+  <title>Sobre — Mariana Veiga Nutrição</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#005D42">
   <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/fonts.css">
   <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/colors.css">
   <link rel="stylesheet" href="_ds/mariana-veiga-nutri-o-design-system-b0453d7d-0d45-48be-9203-073a06358d76/tokens/typography.css">
@@ -31,6 +37,11 @@
     .faq-q .i-up { display: none; }
     details[open] > .faq-q .i-down { display: none; }
     details[open] > .faq-q .i-up { display: block; }
+    @media (max-width: 760px) {
+      .traj-grid { grid-template-columns: minmax(0,1fr) !important; gap: var(--space-7) !important; }
+      .traj-facts { grid-template-columns: minmax(0,1fr) !important; gap: var(--space-5) !important; }
+      .traj-facts > div { padding-left: 0 !important; border-left: none !important; }
+    }
     @media (max-width: 900px) {
       .brand-logo { height: 38px !important; } .brand-name { font-size: 17px !important; } .brand-sub { font-size: 8.5px !important; }
       .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: var(--space-5); width: 100%; padding-top: var(--space-5); }
@@ -75,14 +86,13 @@
         <img src="assets/consultorio.jpg" alt="Mariana Veiga em consultório" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius-xl)">
         <div>
           <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Sobre</div>
-          <h1 style="font-family:var(--font-display);font-size:var(--text-4xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:20ch;margin:0 0 var(--space-6)">Nutrição baseada em evidência, feita com escuta.</h1>
-          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-5)">Sou Mariana Veiga, nutricionista clínica e esportiva, formada pelas Faculdades Integradas Bennett em 2004. Atendi por muitos anos em academias e como personal diet. Hoje atendo presencialmente em consultório particular no Jardim Botânico e também online.</p>
-          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-7)">Meu trabalho começa por entender sua rotina: hábitos, horários, treinos, condições financeiras, logística de vida, objetivos, quadro clínico e psíquico e preferências alimentares. A partir de tudo isso elaboro o planejamento alimentar, que vai sendo ajustado ao longo do acompanhamento.</p>
-          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-7)">A primeira consulta dura 1 hora e inclui avaliação clínica e física, interpretação de exames laboratoriais, prescrição de manipulados fitoterápicos, suplementação e o planejamento alimentar. Uso um aplicativo interativo, que deixa o acompanhamento mais dinâmico no dia a dia.</p>
+          <h1 style="font-family:var(--font-display);font-size:var(--text-4xl);font-weight:var(--weight-light);line-height:var(--leading-tight);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:20ch;margin:0 0 var(--space-6)">Nutricionista clínica e esportiva desde 2004.</h1>
+          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-5)">Sou Mariana Veiga, formada em Nutrição pelas Faculdades Integradas Bennett em 2004, inscrita no CRN sob o número 03100290. Atuei por muitos anos dentro de academias e como personal diet, antes de abrir consultório próprio no Jardim Botânico, no Rio de Janeiro.</p>
+          <p style="color:var(--neutral-600);max-width:54ch;margin:0 0 var(--space-7)">Nutrição clínica e esportiva caminham juntas no meu trabalho: acompanho tanto quem chega com exames alterados quanto quem treina e quer render mais. O que não muda é o ponto de partida, que é a vida real de cada pessoa.</p>
           <div style="display:flex;gap:var(--space-4);flex-wrap:wrap">
-            <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">Faculdades Bennett</x-import>
+            <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">Formada em 2004</x-import>
             <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">CRN 03100290</x-import>
-            <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">Nutrição clínica</x-import>
+            <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">Jardim Botânico e online</x-import>
             <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Tag" hint-size="auto,28px">Nutrição esportiva</x-import>
           </div>
         </div>
@@ -92,25 +102,27 @@
 
   <section class="band" style="padding:var(--space-13) var(--gutter-page-lg)">
     <div style="max-width:var(--content-max);margin:0 auto">
-      <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Trajetória</div>
-      <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:22ch;margin:0 0 var(--space-8)">Entre o esporte de alto rendimento e a clínica.</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6)">
-        <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="lg" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-3)">
-          <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:var(--weight-medium);line-height:var(--leading-snug);color:var(--text-heading)">Consultório no Jardim Botânico</div>
-          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Base do meu trabalho desde a formação em Nutrição pelas Faculdades Integradas Bennett: atendimento individual, acompanhamento de perto e plano revisado a cada retorno.</div>
-        </div></x-import>
-        <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="lg" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-3)">
-          <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:var(--weight-medium);line-height:var(--leading-snug);color:var(--text-heading)">Nutrição  esportiva</div>
-          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Atendimento a atletas profissionais, amadores e praticante de atividades físicas. Com foco em performance, composição corporal e resultados</div>
-        </div></x-import>
-        <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="lg" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-3)">
-          <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:var(--weight-medium);line-height:var(--leading-snug);color:var(--text-heading)">Academias e personal diet</div>
-          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Anos de atendimento dentro de academias e como personal diet, acompanhando de perto a rotina de treino e a alimentação de cada pessoa.</div>
-        </div></x-import>
-        <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Card" padding="lg" radius="lg" hint-size="100%,200px"><div style="display:flex;flex-direction:column;gap:var(--space-3)">
-          <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:var(--weight-medium);line-height:var(--leading-snug);color:var(--text-heading)">Prática atual</div>
-          <div style="color:var(--neutral-600);font-size:var(--text-sm);line-height:var(--leading-normal)">Mais de 1000 pacientes acompanhados, no consultório e online. As reavaliações duram 30 minutos e são marcadas a cada 30, 60 ou 90 dias, conforme o objetivo: refazemos as medições de composição corporal e ajustamos a dieta.</div>
-        </div></x-import>
+      <div>
+        <div>
+          <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-700);margin-bottom:var(--space-5)">Trajetória</div>
+          <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--text-heading);max-width:22ch;margin:0 0 var(--space-7);text-wrap:balance">Vinte anos entre o treino e a clínica.</h2>
+          <p style="margin:0 0 var(--space-6);color:var(--neutral-600);font-size:var(--text-lg);line-height:var(--leading-normal);max-width:56ch;text-wrap:pretty">Comecei dentro de academias e como personal diet, acompanhando de perto a rotina de treino de cada pessoa. Foi ali que aprendi a montar plano para quem tem horário apertado e treina no meio do dia.</p>
+          <p style="margin:0 0 var(--space-9);color:var(--neutral-600);font-size:var(--text-md);line-height:var(--leading-normal);max-width:56ch;text-wrap:pretty">Esse caminho me levou à nutrição esportiva e, com ela, à clínica: exames, condições metabólicas e objetivos que mudam com a fase da vida. Hoje as duas coisas andam juntas em cada atendimento.</p>
+          <div class="traj-facts" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-7);padding-top:var(--space-7);border-top:1px solid var(--border-default)">
+          <div style="padding-left:0;">
+            <div style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:1.1;letter-spacing:var(--tracking-display);color:var(--green-700);margin-bottom:var(--space-3);text-wrap:balance">2004</div>
+            <div style="font-size:var(--text-sm);color:var(--neutral-600);line-height:var(--leading-normal)">Formação em Nutrição</div>
+          </div>
+          <div style="padding-left:var(--space-7);border-left:1px solid var(--border-default);">
+            <div style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:1.1;letter-spacing:var(--tracking-display);color:var(--green-700);margin-bottom:var(--space-3);text-wrap:balance">Clínica e esportiva</div>
+            <div style="font-size:var(--text-sm);color:var(--neutral-600);line-height:var(--leading-normal)">As duas áreas juntas</div>
+          </div>
+          <div style="padding-left:var(--space-7);border-left:1px solid var(--border-default);">
+            <div style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:1.1;letter-spacing:var(--tracking-display);color:var(--green-700);margin-bottom:var(--space-3);text-wrap:balance">+1000</div>
+            <div style="font-size:var(--text-sm);color:var(--neutral-600);line-height:var(--leading-normal)">Pessoas acompanhadas</div>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -120,36 +132,36 @@
       <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:flex-end;justify-content:space-between;margin-bottom:var(--space-10)">
         <div>
           <div style="font-family:var(--font-display);font-size:var(--text-sm);font-weight:var(--weight-medium);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--green-300);margin-bottom:var(--space-5)">Princípios</div>
-          <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--neutral-0);max-width:26ch;margin:0">Quatro coisas que orientam todo atendimento.</h2>
+          <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:var(--weight-light);line-height:var(--leading-snug);letter-spacing:var(--tracking-display);color:var(--neutral-0);max-width:26ch;margin:0">No que eu acredito como nutricionista.</h2>
         </div>
         <img src="assets/ds-apple.png" alt="" style="height:78px;filter:brightness(1.5)">
       </div>
       <div class="cols-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-7)">
           <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
             <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">01</span>
-            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Escuta antes de prescrição</div>
-            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">A primeira consulta é mais tempo ouvindo do que falando. Horários, orçamento, treino e o que você realmente gosta de comer entram na conta antes de qualquer cardápio.</div>
+            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Rotina antes de cardápio</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Horário de trabalho, orçamento, treino e preferência alimentar não são detalhes: são o que decide se um plano funciona ou fica na gaveta.</div>
           </div>
           <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
             <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">02</span>
             <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Sem alimento proibido</div>
-            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Restrição sem motivo clínico não melhora exame nenhum: só piora a adesão. O que existe é frequência, quantidade e contexto.</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Restrição sem motivo clínico não melhora exame nenhum e ainda cria culpa. O que existe é frequência, quantidade e contexto.</div>
           </div>
           <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
             <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">03</span>
-            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Cada mudança tem explicação</div>
-            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Você sai da consulta sabendo por que cada ajuste foi feito. Plano que não se explica não sobrevive à primeira semana difícil.</div>
+            <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Ciência explicada em português</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Toda orientação que eu dou tem por quê, e esse por quê é dito em palavras simples. Ninguém segue o que não entende.</div>
           </div>
           <div style="border-top:1px solid rgba(146,205,177,.3);padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)">
             <span style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);color:var(--green-300);line-height:1">04</span>
             <div style="color:var(--neutral-0);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-medium);line-height:var(--leading-snug)">Recomeço é parte do processo</div>
-            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Saiu da rota em um jantar? Retome na refeição seguinte. Não existe semana perdida, existe ajuste no retorno.</div>
+            <div style="color:rgba(255,255,255,.7);font-size:var(--text-sm);line-height:var(--leading-normal);text-wrap:pretty">Saiu da rota em um jantar? Retoma na refeição seguinte. Não existe semana perdida: existe ajuste no caminho.</div>
           </div>
       </div>
     </div>
   </section>
 
-  <section class="band" style="padding:var(--space-12) var(--gutter-page-lg)">
+  <section class="band" style="background:var(--green-50);padding:var(--space-12) var(--gutter-page-lg)">
     <div style="max-width:var(--content-max);margin:0 auto;background:var(--green-900);border-radius:var(--radius-2xl);padding:var(--space-11);display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;justify-content:space-between">
       <div>
         <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);line-height:var(--leading-snug);color:var(--neutral-0);max-width:24ch;margin:0 0 var(--space-4)">Vamos marcar sua primeira consulta?</h2>
