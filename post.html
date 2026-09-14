@@ -68,6 +68,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
         Voltar para o conteúdo
       </a>
+      <sc-if value="{{ hasPost }}" hint-placeholder-val="{{ true }}">
       <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center;margin-bottom:var(--space-6)">
         <x-import component-from-global-scope="MarianaVeigaNutriODesignSystem_b0453d.Badge" tone="sage" hint-size="auto,22px">{{ post.tag }}</x-import>
         <span style="font-size:var(--text-sm);color:var(--text-muted)">{{ post.date }}</span>
@@ -93,6 +94,10 @@
           </sc-if>
         </sc-for>
       </div>
+      </sc-if>
+      <sc-if value="{{ notFound }}" hint-placeholder-val="{{ false }}">
+        <p style="font-size:var(--text-sm);color:var(--neutral-600);margin:0">Não encontrei esse texto. Veja os outros em <a href="blog.html">conteúdo</a>.</p>
+      </sc-if>
     </div>
   </article>
 
@@ -110,6 +115,7 @@
 
   <section class="band" style="padding:0 var(--gutter-page-lg) var(--space-13)">
     <div style="max-width:var(--content-max);margin:0 auto">
+      <sc-if value="{{ hasRelated }}" hint-placeholder-val="{{ true }}">
       <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:var(--weight-light);letter-spacing:var(--tracking-display);color:var(--text-heading);margin:0 0 var(--space-8)">Continue lendo</h2>
       <div class="cols-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)">
         <sc-for list="{{ related }}" as="item" hint-placeholder-count="3">
@@ -125,6 +131,7 @@
           </a>
         </sc-for>
       </div>
+      </sc-if>
     </div>
   </section>
 
@@ -212,6 +219,16 @@ class Component extends DCLogic {
   state = { post: null, related: null };
 
   componentDidMount() {
+    this.onHash = () => this.load();
+    window.addEventListener("hashchange", this.onHash);
+    this.load();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this.onHash);
+  }
+
+  load() {
     const slug = decodeURIComponent((window.location.hash || "").replace(/^#/, "")).trim();
     if (!slug) return;
     fetch(queryUrl(POST_QUERY, { slug }))
@@ -220,6 +237,7 @@ class Component extends DCLogic {
         const res = (json && json.result) || {};
         const p = res.post;
         if (!p) return;
+        window.scrollTo(0, 0);
         this.setState({
           post: {
             tag: p.tag,
@@ -245,10 +263,15 @@ class Component extends DCLogic {
 
   componentDidUpdate() {
     const p = this.state.post;
-    if (!p || !p.cover) return;
     const img = document.getElementById("postCover");
     const fig = document.getElementById("postFigure");
     const cap = document.getElementById("postCaption");
+    if (!p || !p.cover) {
+      if (fig) fig.style.display = "none";
+      if (img) img.removeAttribute("src");
+      if (cap) { cap.textContent = ""; cap.style.display = "none"; }
+      return;
+    }
     if (img && img.getAttribute("src") !== p.cover) {
       img.src = p.cover;
       img.alt = p.coverAlt || "";
@@ -268,6 +291,9 @@ class Component extends DCLogic {
       post,
       blocks: post.blocks,
       related,
+      hasPost: !!this.state.post,
+      notFound: !this.state.post,
+      hasRelated: related.length > 0,
       toggleNav: () => {
         const h = document.getElementById('siteHeader');
         if (h) h.classList.toggle('nav-open');
